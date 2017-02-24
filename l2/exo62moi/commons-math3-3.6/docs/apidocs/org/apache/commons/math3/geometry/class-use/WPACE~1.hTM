@@ -1,0 +1,949 @@
+zable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-9108154600539125566L</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.ml.neuralnet</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.ml.neuralnet.Network">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ml/neuralnet/Network.html" title="class in org.apache.commons.math3.ml.neuralnet">org.apache.commons.math3.ml.neuralnet.Network</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20130207L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)</pre>
+<div class="block">Prevents proxy bypass.</div>
+</li>
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block">Custom serialization.</div>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>neuronMap</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">K</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">V</a>&gt; neuronMap</pre>
+<div class="block">Neurons.</div>
+</li>
+<li class="blockList">
+<h4>nextId</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> nextId</pre>
+<div class="block">Next available neuron identifier.</div>
+</li>
+<li class="blockList">
+<h4>featureSize</h4>
+<pre>int featureSize</pre>
+<div class="block">Neuron's features set size.</div>
+</li>
+<li class="blockListLast">
+<h4>linkMap</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">K</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">V</a>&gt; linkMap</pre>
+<div class="block">Links.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ml.neuralnet.Network.NeuronIdentifierComparator">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ml/neuralnet/Network.NeuronIdentifierComparator.html" title="class in org.apache.commons.math3.ml.neuralnet">org.apache.commons.math3.ml.neuralnet.Network.NeuronIdentifierComparator</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20130207L</dd>
+</dl>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ml.neuralnet.Neuron">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ml/neuralnet/Neuron.html" title="class in org.apache.commons.math3.ml.neuralnet">org.apache.commons.math3.ml.neuralnet.Neuron</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20130207L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)</pre>
+<div class="block">Prevents proxy bypass.</div>
+</li>
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block">Custom serialization.</div>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>identifier</h4>
+<pre>long identifier</pre>
+<div class="block">Identifier.</div>
+</li>
+<li class="blockList">
+<h4>size</h4>
+<pre>int size</pre>
+<div class="block">Length of the feature set.</div>
+</li>
+<li class="blockList">
+<h4>features</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">V</a>&gt; features</pre>
+<div class="block">Neuron data.</div>
+</li>
+<li class="blockList">
+<h4>numberOfAttemptedUpdates</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> numberOfAttemptedUpdates</pre>
+<div class="block">Number of attempts to update a neuron.</div>
+</li>
+<li class="blockListLast">
+<h4>numberOfSuccessfulUpdates</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> numberOfSuccessfulUpdates</pre>
+<div class="block">Number of successful updates  of a neuron.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.ml.neuralnet.oned</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.ml.neuralnet.oned.NeuronString">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ml/neuralnet/oned/NeuronString.html" title="class in org.apache.commons.math3.ml.neuralnet.oned">org.apache.commons.math3.ml.neuralnet.oned.NeuronString</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)</pre>
+<div class="block">Prevents proxy bypass.</div>
+</li>
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block">Custom serialization.</div>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>network</h4>
+<pre><a href="org/apache/commons/math3/ml/neuralnet/Network.html" title="class in org.apache.commons.math3.ml.neuralnet">Network</a> network</pre>
+<div class="block">Underlying network.</div>
+</li>
+<li class="blockList">
+<h4>size</h4>
+<pre>int size</pre>
+<div class="block">Number of neurons.</div>
+</li>
+<li class="blockList">
+<h4>wrap</h4>
+<pre>boolean wrap</pre>
+<div class="block">Wrap.</div>
+</li>
+<li class="blockListLast">
+<h4>identifiers</h4>
+<pre>long[] identifiers</pre>
+<div class="block">Mapping of the 1D coordinate to the neuron identifiers
+ (attributed by the <a href="org/apache/commons/math3/ml/neuralnet/oned/NeuronString.html#network"><code>NeuronString.network</code></a> instance).</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.ml.neuralnet.twod</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.ml.neuralnet.twod.NeuronSquareMesh2D">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D.html" title="class in org.apache.commons.math3.ml.neuralnet.twod">org.apache.commons.math3.ml.neuralnet.twod.NeuronSquareMesh2D</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)</pre>
+<div class="block">Prevents proxy bypass.</div>
+</li>
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block">Custom serialization.</div>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>network</h4>
+<pre><a href="org/apache/commons/math3/ml/neuralnet/Network.html" title="class in org.apache.commons.math3.ml.neuralnet">Network</a> network</pre>
+<div class="block">Underlying network.</div>
+</li>
+<li class="blockList">
+<h4>numberOfRows</h4>
+<pre>int numberOfRows</pre>
+<div class="block">Number of rows.</div>
+</li>
+<li class="blockList">
+<h4>numberOfColumns</h4>
+<pre>int numberOfColumns</pre>
+<div class="block">Number of columns.</div>
+</li>
+<li class="blockList">
+<h4>wrapRows</h4>
+<pre>boolean wrapRows</pre>
+<div class="block">Wrap.</div>
+</li>
+<li class="blockList">
+<h4>wrapColumns</h4>
+<pre>boolean wrapColumns</pre>
+<div class="block">Wrap.</div>
+</li>
+<li class="blockList">
+<h4>neighbourhood</h4>
+<pre><a href="org/apache/commons/math3/ml/neuralnet/SquareNeighbourhood.html" title="enum in org.apache.commons.math3.ml.neuralnet">SquareNeighbourhood</a> neighbourhood</pre>
+<div class="block">Neighbourhood type.</div>
+</li>
+<li class="blockListLast">
+<h4>identifiers</h4>
+<pre>long[][] identifiers</pre>
+<div class="block">Mapping of the 2D coordinates (in the rectangular mesh) to
+ the neuron identifiers (attributed by the <a href="org/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D.html#network"><code>NeuronSquareMesh2D.network</code></a>
+ instance).</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.ode</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.ode.ContinuousOutputModel">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/ContinuousOutputModel.html" title="class in org.apache.commons.math3.ode">org.apache.commons.math3.ode.ContinuousOutputModel</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-1417964919405031606L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>initialTime</h4>
+<pre>double initialTime</pre>
+<div class="block">Initial integration time.</div>
+</li>
+<li class="blockList">
+<h4>finalTime</h4>
+<pre>double finalTime</pre>
+<div class="block">Final integration time.</div>
+</li>
+<li class="blockList">
+<h4>forward</h4>
+<pre>boolean forward</pre>
+<div class="block">Integration direction indicator.</div>
+</li>
+<li class="blockList">
+<h4>index</h4>
+<pre>int index</pre>
+<div class="block">Current interpolator index.</div>
+</li>
+<li class="blockListLast">
+<h4>steps</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">E</a>&gt; steps</pre>
+<div class="block">Steps table.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ode.EquationsMapper">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/EquationsMapper.html" title="class in org.apache.commons.math3.ode">org.apache.commons.math3.ode.EquationsMapper</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20110925L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstIndex</h4>
+<pre>int firstIndex</pre>
+<div class="block">Index of the first equation element in complete state arrays.</div>
+</li>
+<li class="blockListLast">
+<h4>dimension</h4>
+<pre>int dimension</pre>
+<div class="block">Dimension of the secondary state parameters.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ode.FieldEquationsMapper">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/FieldEquationsMapper.html" title="class in org.apache.commons.math3.ode">org.apache.commons.math3.ode.FieldEquationsMapper</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20151114L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>start</h4>
+<pre>int[] start</pre>
+<div class="block">Start indices of the components.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ode.JacobianMatrices.MismatchedEquations">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/JacobianMatrices.MismatchedEquations.html" title="class in org.apache.commons.math3.ode">org.apache.commons.math3.ode.JacobianMatrices.MismatchedEquations</a> extends <a href="org/apache/commons/math3/exception/MathIllegalArgumentException.html" title="class in org.apache.commons.math3.exception">MathIllegalArgumentException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20120902L</dd>
+</dl>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ode.UnknownParameterException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/UnknownParameterException.html" title="class in org.apache.commons.math3.ode">org.apache.commons.math3.ode.UnknownParameterException</a> extends <a href="org/apache/commons/math3/exception/MathIllegalArgumentException.html" title="class in org.apache.commons.math3.exception">MathIllegalArgumentException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20120902L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>name</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> name</pre>
+<div class="block">Parameter name.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.ode.sampling</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.ode.sampling.AbstractStepInterpolator">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/sampling/AbstractStepInterpolator.html" title="class in org.apache.commons.math3.ode.sampling">org.apache.commons.math3.ode.sampling.AbstractStepInterpolator</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readExternal(java.io.ObjectInput)">
+<!--   -->
+</a>
+<h4>readExternal</h4>
+<pre>public abstract&nbsp;void&nbsp;readExternal(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInput.html?is-external=true" title="class or interface in java.io">ObjectInput</a>&nbsp;in)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code></dd></dl>
+</li>
+<li class="blockListLast"><a name="writeExternal(java.io.ObjectOutput)">
+<!--   -->
+</a>
+<h4>writeExternal</h4>
+<pre>public abstract&nbsp;void&nbsp;writeExternal(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutput.html?is-external=true" title="class or interface in java.io">ObjectOutput</a>&nbsp;out)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.ode.sampling.NordsieckStepInterpolator">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/ode/sampling/NordsieckStepInterpolator.html" title="class in org.apache.commons.math3.ode.sampling">org.apache.commons.math3.ode.sampling.NordsieckStepInterpolator</a> extends <a href="org/apache/commons/math3/ode/sampling/AbstractStepInterpolator.html" title="class in org.apache.commons.math3.ode.sampling">AbstractStepInterpolator</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-7179861704951334960L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readExternal(java.io.ObjectInput)">
+<!--   -->
+</a>
+<h4>readExternal</h4>
+<pre>public&nbsp;void&nbsp;readExternal(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInput.html?is-external=true" title="class or interface in java.io">ObjectInput</a>&nbsp;in)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code></dd></dl>
+</li>
+<li class="blockListLast"><a name="writeExternal(java.io.ObjectOutput)">
+<!--   -->
+</a>
+<h4>writeExternal</h4>
+<pre>public&nbsp;void&nbsp;writeExternal(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutput.html?is-external=true" title="class or interface in java.io">ObjectOutput</a>&nbsp;out)
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.optim</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.optim.PointValuePair">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/PointValuePair.html" title="class in org.apache.commons.math3.optim">org.apache.commons.math3.optim.PointValuePair</a> extends <a href="org/apache/commons/math3/util/Pair.html" title="class in org.apache.commons.math3.util">Pair</a>&lt;double[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20120513L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block">Replace the instance with a data transfer object for serialization.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optim.PointVectorValuePair">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/PointVectorValuePair.html" title="class in org.apache.commons.math3.optim">org.apache.commons.math3.optim.PointVectorValuePair</a> extends <a href="org/apache/commons/math3/util/Pair.html" title="class in org.apache.commons.math3.util">Pair</a>&lt;double[],double[]&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20120513L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block">Replace the instance with a data transfer object for serialization.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.optim.linear</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.optim.linear.LinearConstraint">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/linear/LinearConstraint.html" title="class in org.apache.commons.math3.optim.linear">org.apache.commons.math3.optim.linear.LinearConstraint</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-764632794033034092L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;ois)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a>,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Deserialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if a class in the stream cannot be found</dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be read from the stream</dd></dl>
+</li>
+<li class="blockListLast"><a name="writeObject(java.io.ObjectOutputStream)">
+<!--   -->
+</a>
+<h4>writeObject</h4>
+<pre>private&nbsp;void&nbsp;writeObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io">ObjectOutputStream</a>&nbsp;oos)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Serialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be written to stream</dd></dl>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>relationship</h4>
+<pre><a href="org/apache/commons/math3/optim/linear/Relationship.html" title="enum in org.apache.commons.math3.optim.linear">Relationship</a> relationship</pre>
+<div class="block">Relationship between left and right hand sides (=, &lt;=, >=).</div>
+</li>
+<li class="blockListLast">
+<h4>value</h4>
+<pre>double value</pre>
+<div class="block">Value of the constraint (right hand side).</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optim.linear.LinearObjectiveFunction">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/linear/LinearObjectiveFunction.html" title="class in org.apache.commons.math3.optim.linear">org.apache.commons.math3.optim.linear.LinearObjectiveFunction</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-4531815507568396090L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;ois)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a>,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Deserialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if a class in the stream cannot be found</dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be read from the stream</dd></dl>
+</li>
+<li class="blockListLast"><a name="writeObject(java.io.ObjectOutputStream)">
+<!--   -->
+</a>
+<h4>writeObject</h4>
+<pre>private&nbsp;void&nbsp;writeObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io">ObjectOutputStream</a>&nbsp;oos)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Serialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be written to stream</dd></dl>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>constantTerm</h4>
+<pre>double constantTerm</pre>
+<div class="block">Constant term of the linear equation.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optim.linear.NoFeasibleSolutionException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/linear/NoFeasibleSolutionException.html" title="class in org.apache.commons.math3.optim.linear">org.apache.commons.math3.optim.linear.NoFeasibleSolutionException</a> extends <a href="org/apache/commons/math3/exception/MathIllegalStateException.html" title="class in org.apache.commons.math3.exception">MathIllegalStateException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-3044253632189082760L</dd>
+</dl>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optim.linear.UnboundedSolutionException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/linear/UnboundedSolutionException.html" title="class in org.apache.commons.math3.optim.linear">org.apache.commons.math3.optim.linear.UnboundedSolutionException</a> extends <a href="org/apache/commons/math3/exception/MathIllegalStateException.html" title="class in org.apache.commons.math3.exception">MathIllegalStateException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>940539497277290619L</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.optim.univariate</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.optim.univariate.UnivariatePointValuePair">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optim/univariate/UnivariatePointValuePair.html" title="class in org.apache.commons.math3.optim.univariate">org.apache.commons.math3.optim.univariate.UnivariatePointValuePair</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1003888396256744753L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>point</h4>
+<pre>double point</pre>
+<div class="block">Point.</div>
+</li>
+<li class="blockListLast">
+<h4>value</h4>
+<pre>double value</pre>
+<div class="block">Value of the objective function at the point.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.optimization</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.optimization.PointValuePair">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/PointValuePair.html" title="class in org.apache.commons.math3.optimization">org.apache.commons.math3.optimization.PointValuePair</a> extends <a href="org/apache/commons/math3/util/Pair.html" title="class in org.apache.commons.math3.util">Pair</a>&lt;double[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20120513L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Replace the instance with a data transfer object for serialization.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optimization.PointVectorValuePair">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/PointVectorValuePair.html" title="class in org.apache.commons.math3.optimization">org.apache.commons.math3.optimization.PointVectorValuePair</a> extends <a href="org/apache/commons/math3/util/Pair.html" title="class in org.apache.commons.math3.util">Pair</a>&lt;double[],double[]&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>20120513L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast"><a name="writeReplace()">
+<!--   -->
+</a>
+<h4>writeReplace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;writeReplace()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Replace the instance with a data transfer object for serialization.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.optimization.fitting</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.optimization.fitting.WeightedObservedPoint">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/fitting/WeightedObservedPoint.html" title="class in org.apache.commons.math3.optimization.fitting">org.apache.commons.math3.optimization.fitting.WeightedObservedPoint</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>5306874947404636157L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>weight</h4>
+<pre>double weight</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Weight of the measurement in the fitting process.</div>
+</li>
+<li class="blockList">
+<h4>x</h4>
+<pre>double x</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Abscissa of the point.</div>
+</li>
+<li class="blockListLast">
+<h4>y</h4>
+<pre>double y</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Observed value of the function at x.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.commons.math3.optimization.linear</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.commons.math3.optimization.linear.LinearConstraint">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/linear/LinearConstraint.html" title="class in org.apache.commons.math3.optimization.linear">org.apache.commons.math3.optimization.linear.LinearConstraint</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-764632794033034092L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;ois)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a>,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Deserialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if a class in the stream cannot be found</dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be read from the stream</dd></dl>
+</li>
+<li class="blockListLast"><a name="writeObject(java.io.ObjectOutputStream)">
+<!--   -->
+</a>
+<h4>writeObject</h4>
+<pre>private&nbsp;void&nbsp;writeObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io">ObjectOutputStream</a>&nbsp;oos)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Serialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be written to stream</dd></dl>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>relationship</h4>
+<pre><a href="org/apache/commons/math3/optimization/linear/Relationship.html" title="enum in org.apache.commons.math3.optimization.linear">Relationship</a> relationship</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Relationship between left and right hand sides (=, &lt;=, >=).</div>
+</li>
+<li class="blockListLast">
+<h4>value</h4>
+<pre>double value</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Value of the constraint (right hand side).</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optimization.linear.LinearObjectiveFunction">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/linear/LinearObjectiveFunction.html" title="class in org.apache.commons.math3.optimization.linear">org.apache.commons.math3.optimization.linear.LinearObjectiveFunction</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-4531815507568396090L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockList"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;ois)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a>,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Deserialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if a class in the stream cannot be found</dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be read from the stream</dd></dl>
+</li>
+<li class="blockListLast"><a name="writeObject(java.io.ObjectOutputStream)">
+<!--   -->
+</a>
+<h4>writeObject</h4>
+<pre>private&nbsp;void&nbsp;writeObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io">ObjectOutputStream</a>&nbsp;oos)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Serialize the instance.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if object cannot be written to stream</dd></dl>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>constantTerm</h4>
+<pre>double constantTerm</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constant term of the linear equation.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optimization.linear.NoFeasibleSolutionException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/linear/NoFeasibleSolutionException.html" title="class in org.apache.commons.math3.optimization.linear">org.apache.commons.math3.optimization.linear.NoFeasibleSolutionException</a> extends <a href="org/apache/commons/math3/exception/MathIllegalStateException.html" title="class in org.apache.commons.math3.exception">MathIllegalStateException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-3044253632189082760L</dd>
+</dl>
+</li>
+<li class="blockList"><a name="org.apache.commons.math3.optimization.linear.UnboundedSolutionException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/commons/math3/optimization/linear/UnboundedSolutionException.html" title="class in org.apache.commons.math3.optimization.linear">org.apache.commons.math3.optimization.linear.UnboundedSolutionException</a> extends <a href="org/apache/commons/math3/e
