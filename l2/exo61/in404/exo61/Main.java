@@ -1,5 +1,7 @@
 package in404.exo61;
-import toto/clientServ.jar;
+import in404.exo61.serveur.*;
+import in404.exo61.client.*;
+//import toto/clientServ.jar;
 
 public class Main
 {

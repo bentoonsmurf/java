@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=nom
+comment0.target=Client(java.lang.String)
+comment0.text=\n\ Constructeur\ d'objets\ de\ classe\ Client\n
+comment1.params=s
+comment1.target=boolean\ seConnecter(in404.exo61.serveur.Serveur)
+comment1.text=\n\ \ se\ connecte\ au\ serveur\n
+comment2.params=
+comment2.target=java.lang.String\ getNom()
+comment3.params=message
+comment3.target=void\ envoyer(java.lang.String)
+comment4.params=message
+comment4.target=java.lang.String\ recevoir(java.lang.String)
+numComments=5
