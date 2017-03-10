@@ -1,11 +1,4 @@
 
-/**
- * Write a description of class Drawing here.
- * 
- * @author (Kenza Kellou-Menouer) 
- * @version (1)
- */
-
 import java.util.ArrayList;
 
 
@@ -23,13 +16,6 @@ public class Drawing
        this.name = name;
        this.listCirle = new ArrayList<Circle> ();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
     
     
      public boolean addCircle(Circle c)

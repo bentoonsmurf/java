@@ -37,4 +37,7 @@ public class Circle
     {        
         return this.name;
     }
+    public String getColor(){
+        return this.color;
+    }
 }

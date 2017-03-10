@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=p1\ p2\ name
+comment0.target=droite(point,\ point,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment2.params=p1
+comment2.target=boolean\ add_point_dans_droite(point)
+comment3.params=
+comment3.target=java.lang.String\ all_name()
+numComments=4
