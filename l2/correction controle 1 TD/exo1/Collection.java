@@ -1,10 +1,3 @@
-/**
- * Write a description of class Collection here.
- * 
-* @author (Kenza Kellou-Menouer)
- * @version (1)
- */
-
 import java.util.ArrayList;
 
 public class Collection

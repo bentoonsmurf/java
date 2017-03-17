@@ -1,19 +1,19 @@
 #BlueJ package file
 objectbench.height=100
-objectbench.width=379
+objectbench.width=686
 package.editor.height=400
 package.editor.width=560
-package.editor.x=460
-package.editor.y=238
+package.editor.x=19
+package.editor.y=19
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=840
-target1.editor.width=1552
-target1.editor.x=-8
-target1.editor.y=-8
+target1.editor.height=749
+target1.editor.width=1368
+target1.editor.x=-1
+target1.editor.y=-1
 target1.height=50
 target1.name=MOTUS
 target1.naviview.expanded=true

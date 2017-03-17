@@ -22,5 +22,13 @@ public class Voiture extends Vehicule
     {
         
        return Integer.parseInt(this.immatriculation.substring(0, 4));
+      
     }
+    
+    public String tostring(){
+        return String.valueOf(this.nbPorte);
+        
+    }
+    
+    
 }
