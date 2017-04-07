@@ -18,7 +18,7 @@ public class Main
             System.out.println(e.toString());
         }
         finally
-        {
+        {   System.out.println("bonjour");
             fichier.close();
         }
     }
@@ -35,7 +35,7 @@ public class Main
              System.out.println(e.toString());
         }
          finally
-        {
+        {   System.out.println("bonjour");
             fichier.close();
         }
     }
