@@ -1,0 +1,56 @@
+un colec est un objet qui regroupe plusieurs elemnts
+
+les tableau ne permetes pas l'allocation dynamique (taille fixe )
+les tableau c'est un bon ex de collection
+
+
+contenaires = m
+type  = l
+algo = n
+il y a l x m versions d'un meme algo
+les collections permettent de reduire l'effort lors de l'implementation
+reduire le cou de conception
+reduire l'effort d'aprentissage
+reutiliser des truc deja fait
+
+
+les interfaces   les implementations les algos = tout java
+
+public class exemple Implement interface1,...
+une classe peut heriter de plusieurs interfaces
+dans une interface tas pas de code
+une interface c'est un cadre pour les collections
+
+une collection java ne peut contenir que des objet  pour ca                                     import java.util.*
+size
+contains(objet o )
+add(E,e)
+remove(E,e)containsAll(collection<?>)
+add 
+remove
+retain
+
+for(String ellement : nomdelachaine)
+l'interface set represente une collection dont tout les ellements sont distinct
+set n'ajoute aucune methode a l'interface collection
+s1retainall(s2)===
+
+
+trimtosize() = ajuste la taille d'un  tableau a sa contenance
+votez array list
+map est une table de hachage   hachmap
+l'interface map
+les tables de hachages c mieu = class hashtable
+
+
+
+
+
+
+
+
+
+
+
+
+
