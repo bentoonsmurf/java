@@ -1,0 +1,59 @@
+
+Méthode
+
+Rôle
+
+boolean add(E e)
+Ajouter un élément à la collection (optionnelle)
+
+boolean addAll(Collection<? extends E> c)
+Ajouter tous les éléments de la collection fournie en paramètre dans la collection (optionnelle)
+
+void clear()
+Supprimer tous les éléments de la collection (optionnelle)
+
+boolean contains(Object o)
+Retourner un booléen qui précise si l'élément est présent dans la collection
+
+boolean containsAll(Collection<?> c)
+Retourner un booléen qui précise si tous les éléments fournis en paramètres sont présents dans la collection
+
+boolean equals(Object o)
+Vérifier l'égalité avec la collection fournie en paramètre
+
+int hashCode()
+Retourner la valeur de hachage de la collection
+
+boolean isEmpty()
+Retourner un booléen qui précise si la collection est vide
+
+Iterator<E> iterator()
+Retourner un Iterator qui permet le parcours des éléments de la collection
+
+boolean remove(Object o)
+Supprimer un élément de la collection s'il est présent (optionnelle)
+
+boolean removeAll(Collection<?> c)
+Supprimer tous les éléments fournis en paramètres de la collection s'ils sont présents (optionnelle)
+
+boolean retainAll(Collection<?> c)
+Ne laisser dans la collection que les éléments fournis en paramètres : les autres éléments sont supprimés (optionnelle). Elle renvoie un booléen qui précise si le contenu de la collection a été modifié
+
+int size()
+Retourner le nombre d'éléments contenus dans la collection
+
+Object[] toArray()
+Retourner un tableau contenant tous les éléments de la collection
+
+<T> T[] toArray(T[] a)
+Retourner un tableau typé de tous les éléments de la collection
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+get(int index) retourne l'élément à l'indice demandé ;
+remove(int index) efface l'entrée à l'indice demandé ;
+isEmpty() renvoie « vrai » si l'objet est vide ;
+removeAll() efface tout le contenu de l'objet ;
+contains(Object element) retourne « vrai » si l'élément passé en paramètre est dans l'ArrayList.
